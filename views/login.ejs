@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="/public/css/style.css">
+<h1 class="page-name">Login Page</h1>
+<div class="app">
+    <% if(messages.error){ %>
+    <%= messages.error%>
+    <%}%>
+    <form action="/login" method="post">
+        <div class="input-div">
+            <lable for="username">Username</lable>
+            <label for="username"></label>
+            <input id="username" name="username" type="text" required maxlength="16" placeholder="username...">
+        </div>
+
+        <div class="input-div">
+            <lable for="password">Password</lable>
+            <label for="password"></label>
+            <input id="password" name="password" type="password" required placeholder="********">
+        </div>
+
+        <input class="registration" type="submit" value="Sign up">
+    </form>
+    <br>
+    <div class="navbar">
+        <ul>
+            <li><a href="/registration">Registration</a></li>
+            <li><a href="/">Home</a></li>
+        </ul>
+    </div>
+</div>
